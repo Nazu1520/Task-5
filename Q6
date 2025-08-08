@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Tariff {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+
+        int month = input.nextInt();
+        int rent = input.nextInt();
+        int days = input.nextInt();
+
+      
+        int finalRent;
+        if (month == 4 || month == 5 || month == 6 || month == 11 || month == 12) {
+            finalRent = rent + (rent * 20 / 100);
+        } else {
+            finalRent = rent; 
+        }
+
+        int total = finalRent * days;
+
+        System.out.println(total + ".00");
+
+        
+    }
+}
